@@ -1,0 +1,165 @@
+$normal: 22px;
+$borderStyle: dashed;
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=teko:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=poppins:wght@800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "preeti";
+  src: url(/fonts/PREETI.TTF);
+}
+@font-face {
+  font-family: "arap 11";
+  src: url("/fonts/ARAP\ 11\ Regular.ttf");
+}
+@font-face {
+  font-family: "himchuli";
+  src: url("/fonts/Himchuli\ Bold.ttf");
+}
+@font-face {
+  font-family: "kantipur";
+  src: url("/fonts/Kantipur\ Reg.ttf");
+}
+@font-face {
+  font-family: "fontasy himali";
+  src: url("/fonts/Fontasy\ Himali\ Regular.ttf");
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #c1cde6;
+  position: relative;
+}
+button {
+  background-color: rgb(70, 160, 52);
+  color: white;
+  padding: 10px 35px 10px 45px;
+  border-radius: 3px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.25);
+  font-family: "arap 11", sans-serif;
+  font-size: $normal;
+  transition: box-shadow ease-in-out 300ms;
+  position: relative;
+  cursor: url("/images/print-icon.png"), pointer; // CUSTOM image Cursor as a POINTER
+  &:hover {
+    box-shadow: 0px 6px 10px -1px rgba(0, 0, 0, 0.25);
+  }
+  img {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+  }
+}
+.hide {
+  display: none;
+}
+.app {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  // padding: 0px 0px 10px 0;
+  .front-view {
+    font-family: "preeti", sans-serif;
+    border-radius: 5px;
+    padding: 10px 24px 5px 24px;
+    height: 1122.24px;
+    width: 793.92px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 6px 15px -1px rgba(0, 0, 0, 0.25);
+    transition: box-shadow ease-in-out 300ms;
+    &:hover {
+      box-shadow: 6px 0px 20px -1px rgba(0, 0, 0, 0.25);
+    }
+    position: relative;
+    .header{
+      width: 100%;
+      text-align: center;
+      .name{
+        font-size: $normal+10;
+        font-weight: bold;
+      }
+      .address{
+        font-size: $normal;
+      }
+      .title{
+        font-size: $normal+5;
+        font-weight: bold;
+        span.year{
+          font-family: "fontasy himali", sans-serif;
+          font-size: 18px;
+        }
+      }
+    }
+    table.poshakTable {
+      width: 100%;
+      table-layout: initial;
+      border-style: $borderStyle;
+      border-collapse: collapse;
+      margin-top: 8px;
+      border: 1px $borderStyle black;
+      .head {
+        td {
+          font-weight: bold;
+          font-family: "FONTASY_HIMALI_TT", sans-serif;
+          font-size: 15px;
+          border-left: 1px $borderStyle black;
+          text-align: center;
+          padding-left: 3px;
+          padding-right: 3px;
+        }
+      }
+      .body {
+        td {
+          border-left: 1px $borderStyle black;
+          border-top: 1px $borderStyle black;
+          font-size: 22px;
+          font-family: "preeti", sans-serif;
+          text-align: left; 
+          padding: 1.5px;
+          padding-left: 3px;
+          &:nth-child(1){
+            text-align: right;
+            font-family: "fontasy himali", sans-serif;
+            font-size: 14px;
+          }
+          &:nth-child(2){
+            text-align: center;
+          }
+          &:nth-child(4){
+            text-align: right;
+            font-family: "fontasy himali", sans-serif;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .footer{
+      font-size: 20px;
+      .inwords{
+        margin-top: 5px;
+        font-weight: bold;
+        span.value{
+          font-weight: normal;
+        }
+      }
+      .sign{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+      }
+    }
+  }
+}

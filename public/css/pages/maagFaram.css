@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=teko:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=poppins:wght@800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "preeti";
+  src: url(/fonts/PREETI.TTF);
+}
+
+@font-face {
+  font-family: "arap 11";
+  src: url("/fonts/ARAP 11 Regular.ttf");
+}
+
+@font-face {
+  font-family: "himchuli";
+  src: url("/fonts/Himchuli Bold.ttf");
+}
+
+@font-face {
+  font-family: "kantipur";
+  src: url("/fonts/Kantipur Reg.ttf");
+}
+
+@font-face {
+  font-family: "fontasy himali";
+  src: url("/fonts/Fontasy Himali Regular.ttf");
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #e6e8ec;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #e6e8ec;
+}
+
+.app .front-view {
+  border-radius: 10px;
+  padding: 30px 35px;
+  background-color: #e6e8ec;
+  -webkit-box-shadow: 0px 6px 15px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 6px 15px -1px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.app .front-view:hover {
+  -webkit-box-shadow: 6px 0px 20px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 6px 0px 20px -1px rgba(0, 0, 0, 0.25);
+}
+
+.app .front-view .header {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .front-view .header h1.title {
+  font-family: "mukta", sans-serif;
+  color: #1f1f1f;
+  font-weight: 800;
+  font-size: 2.5em;
+}
+
+.app .front-view .header .buttons button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  color: #ffffff;
+  background-color: #00831d;
+  font-family: "mukta", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+}
+
+.app .front-view form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px 20px;
+}
+
+.app .front-view form div {
+  margin-bottom: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app .front-view form div label {
+  line-height: 1.3em;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "mukta", sans-serif;
+}
+
+.app .front-view form div label input[type="text"].test {
+  text-align: center;
+  border: 1px black;
+  border-radius: 5px;
+  padding: 1px 6px;
+  font-size: 14px;
+  width: 32px;
+  font-family: "fontasy himali", sans-serif;
+}
+
+.app .front-view form div label input[type="text"].test:focus {
+  border: 1px black;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.app .front-view form div select {
+  border: 1px black;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 20px;
+  font-family: "preeti", sans-serif;
+}
+
+.app .front-view form div select:focus {
+  border: 1px black;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 8px;
+}
+
+.app .front-view form div input {
+  border: 1px black;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 20px;
+  font-family: "preeti", sans-serif;
+}
+
+.app .front-view form div input.date-picker {
+  font-family: "mukta", sans-serif;
+  font-size: 14px;
+}
+
+.app .front-view form div input.date-picker:focus {
+  font-family: "mukta", sans-serif;
+  font-size: 14px;
+}
+
+.app .front-view form div input[type="number"], .app .front-view form div input[type="date"] {
+  font-size: 13px;
+  font-family: "fontasy himali", sans-serif;
+}
+
+.app .front-view form div input[type="number"]:-moz-read-only, .app .front-view form div input[type="date"]:-moz-read-only {
+  font-size: 13px;
+  font-family: "fontasy himali", sans-serif;
+}
+
+.app .front-view form div input[type="number"]:read-only, .app .front-view form div input[type="date"]:read-only {
+  font-size: 13px;
+  font-family: "fontasy himali", sans-serif;
+}
+
+.app .front-view form div input[type="number"]::-webkit-input-placeholder, .app .front-view form div input[type="date"]::-webkit-input-placeholder {
+  font-size: 20px;
+  font-family: "preeti", sans-serif;
+}
+
+.app .front-view form div input[type="number"]:-ms-input-placeholder, .app .front-view form div input[type="date"]:-ms-input-placeholder {
+  font-size: 20px;
+  font-family: "preeti", sans-serif;
+}
+
+.app .front-view form div input[type="number"]::-ms-input-placeholder, .app .front-view form div input[type="date"]::-ms-input-placeholder {
+  font-size: 20px;
+  font-family: "preeti", sans-serif;
+}
+
+.app .front-view form div input[type="number"]::placeholder, .app .front-view form div input[type="date"]::placeholder {
+  font-size: 20px;
+  font-family: "preeti", sans-serif;
+}
+
+.app .front-view form div input[type="number"]:focus, .app .front-view form div input[type="date"]:focus {
+  font-size: 13px;
+  font-family: "fontasy himali", sans-serif;
+}
+
+.app .front-view form div input:hover {
+  border: 2px red;
+}
+
+.app .front-view form div input:focus {
+  border: 1px black;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 8px;
+}
+
+.app .front-view form div input.readonly {
+  font-size: 13px;
+  background-color: #d6d0d0;
+}
+
+.app .front-view form div button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  color: #ffffff;
+  background-color: #00831d;
+  font-family: "mukta", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+}
+
+.app .front-view .notice {
+  margin: 10px 0;
+  text-align: center;
+  color: #be3d3d;
+  font-weight: bold;
+}
+/*# sourceMappingURL=maagFaram.css.map */

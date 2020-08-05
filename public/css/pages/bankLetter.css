@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=teko:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=poppins:wght@800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "preeti";
+  src: url(/fonts/PREETI.TTF);
+}
+
+@font-face {
+  font-family: "arap 11";
+  src: url("/fonts/ARAP 11 Regular.ttf");
+}
+
+@font-face {
+  font-family: "himchuli";
+  src: url("/fonts/Himchuli Bold.ttf");
+}
+
+@font-face {
+  font-family: "kantipur";
+  src: url("/fonts/Kantipur Reg.ttf");
+}
+
+@font-face {
+  font-family: "fontasy himali";
+  src: url("/fonts/Fontasy Himali Regular.ttf");
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #c1cde6;
+  position: relative;
+}
+
+button {
+  background-color: #46a034;
+  color: white;
+  padding: 10px 35px 10px 45px;
+  border-radius: 3px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.25);
+  font-family: "arap 11", sans-serif;
+  font-size: 22px;
+  -webkit-transition: -webkit-box-shadow ease-in-out 300ms;
+  transition: -webkit-box-shadow ease-in-out 300ms;
+  transition: box-shadow ease-in-out 300ms;
+  transition: box-shadow ease-in-out 300ms, -webkit-box-shadow ease-in-out 300ms;
+  position: relative;
+  cursor: url("/images/print-icon.png"), pointer;
+}
+
+button:hover {
+  -webkit-box-shadow: 0px 6px 10px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 6px 10px -1px rgba(0, 0, 0, 0.25);
+}
+
+button img {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.hide {
+  display: none;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.app .front-view {
+  font-family: "preeti", sans-serif;
+  border-radius: 5px;
+  padding: 10px 24px 5px 24px;
+  height: 1122.24px;
+  width: 793.92px;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0px 6px 15px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 6px 15px -1px rgba(0, 0, 0, 0.25);
+  -webkit-transition: -webkit-box-shadow ease-in-out 300ms;
+  transition: -webkit-box-shadow ease-in-out 300ms;
+  transition: box-shadow ease-in-out 300ms;
+  transition: box-shadow ease-in-out 300ms, -webkit-box-shadow ease-in-out 300ms;
+  position: relative;
+}
+
+.app .front-view:hover {
+  -webkit-box-shadow: 6px 0px 20px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 6px 0px 20px -1px rgba(0, 0, 0, 0.25);
+}
+
+.app .front-view .letter .header {
+  display: block;
+  border-bottom: 4px ridge black;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+  position: relative;
+}
+
+.app .front-view .letter .header .logo {
+  position: absolute;
+  left: 16px;
+  top: 4px;
+  width: 111px;
+  height: 111px;
+}
+
+.app .front-view .letter .header .center {
+  text-align: center;
+}
+
+.app .front-view .letter .header .center .slogan {
+  font-size: 22px;
+  font-style: italic;
+}
+
+.app .front-view .letter .header .center .name {
+  font-family: "Arap 11", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.app .front-view .letter .header .center .address {
+  font-size: 24px;
+}
+
+.app .front-view .letter .header .center .estd {
+  font-size: 22px;
+}
+
+.app .front-view .letter .header .meta {
+  padding: 0 15px;
+  padding-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.app .front-view .letter .header .meta .left {
+  font-size: 21px;
+}
+
+.app .front-view .letter .header .meta .left .wrapper .fiscal-year span.year {
+  font-size: 15px;
+  font-family: "fontasy himali", sans-serif;
+}
+
+.app .front-view .letter .header .meta .left .wrapper .letterNumber span.refNo {
+  font-size: 15px;
+  font-family: "fontasy himali", sans-serif;
+}
+
+.app .front-view .letter .header .meta .right {
+  font-size: 21px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding-right: 5px;
+}
+
+.app .front-view .letter .header .meta .right span.date {
+  font-size: 15px;
+  font-family: "fontasy himali", sans-serif;
+}
+
+.app .front-view .letter .main {
+  margin: 0;
+  padding: 0 10px;
+  padding-top: 10px;
+}
+
+.app .front-view .letter .main .to {
+  text-align: left;
+  font-size: 22px;
+}
+
+.app .front-view .letter .main .wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .front-view .letter .main .wrapper .subject {
+  font-family: "himchuli", sans-serif;
+  display: inline-block;
+  font-size: 25px;
+  text-align: center;
+  margin: 12px 0;
+  border-bottom: 1px solid #000;
+}
+
+.app .front-view .letter .main .content {
+  text-align: justify;
+  font-size: 22px;
+  line-height: 1em;
+}
+
+.app .front-view .letter .main .content::before {
+  content: "filler";
+  opacity: 0;
+}
+
+.app .front-view .letter .main .content table {
+  margin-top: 5px;
+  width: 100%;
+  border: 1px dashed black;
+}
+
+.app .front-view .letter .main .content table thead {
+  border: 1px dashed black;
+  font-family: "kantipur", sans-serif;
+  font-size: 22px;
+}
+
+.app .front-view .letter .main .content table thead td.tableHead {
+  padding: 2px 10px;
+  border-left: 1px dashed black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.app .front-view .letter .main .content table thead td.tableHead:nth-child(1) {
+  border-left: none;
+}
+
+.app .front-view .letter .main .content table tr td.teachersData {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 1px dashed black;
+  border-left: 1px dashed black;
+  padding: 0px;
+  padding-left: 10px;
+  padding-right: 5px;
+  font-size: 22px;
+}
+
+.app .front-view .letter .main .content table tr td.teachersData:nth-child(1) {
+  border-left: none;
+  font-family: "fontasy himali", sans-serif;
+  font-size: 14px;
+  text-align: right;
+}
+
+.app .front-view .letter .main .content table tr td.teachersData:nth-child(4) {
+  font-family: "fontasy himali", sans-serif;
+  font-size: 14px;
+  text-align: right;
+}
+
+.app .front-view .letter .main .content table tr td.teachersData:nth-child(4)::after {
+  content: "";
+}
+
+.app .front-view .letter .main .content table tr td.teachersData:nth-child(5) {
+  font-family: "fontasy himali", sans-serif;
+  font-size: 14px;
+  text-align: right;
+}
+
+.app .front-view .letter .main .content table tr td.teachersData:nth-last-child() {
+  border: none;
+}
+
+.app .front-view .letter .main .content span {
+  font-family: "kantipur", sans-serif;
+  font-weight: bold;
+}
+
+.app .front-view .letter .main .content span.values {
+  font-family: "fontasy himali", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.app .front-view .letter .main .content .wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.app .front-view .letter .main .content .wrapper .sign-by {
+  font-size: 22px;
+  width: 200px;
+  text-align: right;
+  padding-top: 5px;
+  margin-top: 20px;
+  border-top: 2px dotted black;
+}
+
+.app .front-view .letter .footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 8px 0px;
+  width: 100%;
+  font-family: "Times new Roman", serif;
+}
+
+.app .front-view .letter .footer .wrapper {
+  padding-top: 5px;
+  border-top: 0.5px dashed black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .front-view .letter .footer .wrapper .email {
+  position: relative;
+  font-family: "Times new Roman", serif;
+  text-align: center;
+  font-size: 18px;
+}
+
+.app .front-view .letter .footer .wrapper .email span.period {
+  position: absolute;
+  right: -1px;
+  bottom: 0px;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.app .front-view .letter .footer .wrapper .phone {
+  font-family: "fontasy himali", sans-serif;
+  text-align: center;
+}
+
+.app .front-view .letter .footer .wrapper .phone span.post {
+  font-size: 22px;
+  font-family: "preeti", sans-serif;
+}
+/*# sourceMappingURL=bankLetter.css.map */

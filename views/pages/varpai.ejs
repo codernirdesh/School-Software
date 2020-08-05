@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>माग फारम - <%= schoolName %></title>
+    <%- include('../parts/favicon.ejs') %>
+    <link rel="stylesheet" href="/css/pages/varpai.css" />
+  </head>
+  <body>
+    <button class="button" id="button" onclick="printPage('app')">
+      <img src="/images/print-icon.png" alt="printIcon" /> ekf{O{ lk|G^
+      ug'{xf];\
+    </button>
+    <div class="app">
+      <div class="front-view">
+        <div class="header">
+          <div class="top">
+            <div class="name">>L cd/ dfWolds ljBfno</div>
+            <div class="address">uf}/fbx–)(- a}u'Gw'/f _, emfkf</div>
+          </div>
+          <div class="details">
+            tx M
+            <span class="taha"
+              >dfWolds <span class="period">&period;</span></span
+            >&nbsp; lj=;+=
+            <span class="fiscal-year">077/078</span>
+            <span class="first-month">>fj0f</span> b]lv
+            <span class="second-month">>fj0f</span> ;Ddsf] tnaL ekf{O
+          </div>
+        </div>
+        <table border="1" class="varpaiTable" cellpadding="0">
+          <tr class="head">
+            <td rowspan="2">qm=;+=</td>
+            <td rowspan="2">lzIfssf] gfdy/</td>
+            <td rowspan="2">tna :s]n</td>
+            <td rowspan="2">u]|*</td>
+            <td rowspan="2">hDdf</td>
+            <td rowspan="2">s=;+=sf]if yk</td>
+            <td rowspan="2">ljdf yk</td>
+            <td class="colspan" colspan="2">eQf</td>
+            <td rowspan="2">hDdf tna /sd</td>
+            <td class="colspan" colspan="3">s^\^L /sd</td>
+            <td rowspan="2">rf* jf*</td>
+            <td rowspan="2">hDdf /sd</td>
+            <td rowspan="2">1 k|ltzt s/ s^\^L</td>
+            <td rowspan="2">hDdf /sd</td>
+            <td rowspan="2">cfos/ s^\^L</td>
+            <td rowspan="2">hDdf</td>
+            <td rowspan="2">k]ZsL s^\^L</td>
+            <td rowspan="2">v'b a'em]sf] /sd</td>
+            <td rowspan="2">x:tfIf/</td>
+            <td rowspan="2">s}=</td>
+          </tr>
+          <tr class="head">
+            <td class="left-border">k|=c=</td>
+            <td>cGo</td>
+            <td>hDdf tna /sd</td>
+            <td>s= ;+= sf]if</td>
+            <td>ljdf</td>
+          </tr>
+
+          <% var counter=1; teachersList.forEach((Tdata) => { %>
+          <tr class="body">
+            <td><%=counter%></td>
+            <td><%=Tdata.name%></td>
+            <td><%=Tdata.rate%></td>
+            <td><%=Tdata.rateNumber%></td>
+            <td><%=Tdata.rate+Tdata.rateNumber%></td>
+            <td><%=Tdata.kaSamKosh%></td>
+            <td><%=Tdata.insurance%></td>
+            <td><%=Tdata.principalallowence%></td>
+            <td><%=Tdata.otherAllowence%></td>
+            <td>
+              <%=Tdata.rate+Tdata.rateNumber+Tdata.kaSamKosh+Tdata.insurance+Tdata.principalallowence+Tdata.otherAllowence%>
+            </td>
+            <td><%=Tdata.k%></td>
+            <td><%=Tdata.l%></td>
+            <td><%=Tdata.m%></td>
+            <td><%=Tdata.n%></td>
+            <td><%=Tdata.o%></td>
+            <td><%=Tdata.p%></td>
+            <td><%=Tdata.q%></td>
+            <td><%=Tdata.r%></td>
+            <td><%=Tdata.s%></td>
+            <td><%=Tdata.t%></td>
+            <td><%=Tdata.u%></td>
+            <td><%=Tdata.v%></td>
+            <td><%=Tdata.w%></td>
+          </tr>
+          <% counter++;}); %>
+          <!-- <tr>
+                <td>Tdata.1</td>
+                <td>Tdata.2</td>
+                <td>Tdata.3</td>
+                <td>Tdata.4</td>
+                <td>Tdata.5</td>
+                <td>Tdata.6</td>
+                <td>Tdata.7</td>
+                <td>Tdata.8</td>
+                <td>Tdata.9</td>
+                <td>Tdata.10</td>
+                <td>Tdata.11</td>
+                <td>Tdata.12</td>
+                <td>Tdata.13</td>
+                <td>Tdata.14</td>
+                <td>Tdata.15</td>
+                <td>Tdata.16</td>
+                <td>Tdata.17</td>
+                <td>Tdata.18</td>
+                <td>Tdata.19</td>
+                <td>Tdata.20</td>
+                <td>Tdata.21</td>
+                <td>Tdata.22</td>
+                <td>Tdata.23</td>
+              </tr> -->
+        </table>
+        <div class="footer">
+          <div class="1">tof/ ug]{<br />v]d k|;fb sf]O{/fnf</div>
+          <div class="2">––––––––––</div>
+          <div class="3">k|wfgfWofks<br />uf]kfn k|;fb kf]v/]n</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/pages/varpai.js"></script>
+  </body>
+</html>

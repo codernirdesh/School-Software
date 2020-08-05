@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>माग फारम - <%= schoolName %></title>
+    <%- include('../parts/favicon.ejs') %>
+    <link rel="stylesheet" href="/css/pages/bankLetter.css" />
+  </head>
+  <body>
+    <button class="button" id="button" onclick="printPage('app')">
+      <img src="/images/print-icon.png" alt="printIcon" /> dfu kmf/d lk|G^
+      ug'{xf];\
+    </button>
+    <div class="app" id="app">
+      <div id="printMe" class="front-view">
+        <div class="letter">
+          <div class="header">
+            <img class="logo" src="/images/Digital/Logo.png" alt="" />
+            <div class="center">
+              <div class="slogan">æljBf wgd\ ;j{ wgd\ k|wfgdÆ</div>
+              <div class="name">>L cd/ dfWolds ljBfno</div>
+              <div class="address">uf}/fbx–(,-a}u'Gw/f_, emfkf</div>
+              <div class="estd">:yfkgf M–@)@%</div>
+            </div>
+            <div class="meta">
+              <div class="left">
+                <div class="wrapper">
+                  <div class="fiscal-year">
+                    k=;+= M <span class="year">077/078</span>
+                  </div>
+                  <div class="letterNumber">
+                    r=g+= M <span class="refNo">35</span>
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                ldlt M <span class="date">2077/04/12</span>
+              </div>
+            </div>
+          </div>
+          <div class="main">
+            <div class="to">
+              >L k|jGws Ho",<br />
+              l;4fy{ j}+s ln=, uf}/fbx<br />
+              zfvf sfof{no uf}/fbx .
+            </div>
+            <div class="wrapper">
+              <div class="subject">
+                ljifoM–
+                <span class="subject-content">/sd hDdf ul/lbg] af/] .</span>
+              </div>
+            </div>
+            <div class="content">
+              pk/f]Qm ;DaGwdf o; ljBfnosf] dfWolds txdf sfo{/t lzIfsx?sf] cf=j=
+              <span class="values">077/078</span> k|yd rf}dfl;s tna, eQfsf] dfu
+              kmf/d tof/ ul/ k7fO{Psf] 5 . o; ljBfnosf] l;4fy{ j}+s ln= uf}/fbx
+              l:yt rlNt lx;fa g++= <span class="values">214000024101</span> df
+              /sd lgsfzf u/L k7fO{lbg' x'g ;fb/ cg'/f]w 5 .
+              <br />
+              <table>
+                <thead>
+                  <td class="tableHead">qm=;+=</td>
+                  <td class="tableHead">lzIfs÷sd{rf/Lsf] gfdy/</td>
+                  <td class="tableHead">kb</td>
+                  <td class="tableHead">v'b kfpg]</td>
+                  <td class="tableHead">vftf g+=</td>
+                  <td class="tableHead">s}lkmot</td>
+                </thead>
+                <% teachersData.forEach(teacher => { %>
+                <tr>
+                  <td class="teachersData"><%=teacher.id%></td>
+                  <td class="teachersData"><%=teacher.name%></td>
+                  <td class="teachersData"><%=teacher.post%></td>
+                  <td class="teachersData"><%=teacher.receivingMoney%></td>
+                  <td class="teachersData"><%=teacher.accountNumber%></td>
+                  <td class="teachersData"><%=teacher.remarks%></td>
+                </tr>
+                <% }) %>
+              </table>
+              <div class="wrapper">
+                <div class="sign-by">uf]kfn k|;fb kf]v/]n<br />k|wfgfWofks</div>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="wrapper">
+              <div class="email">
+                E-mail : amarmavi99@gmail.com &nbsp;&nbsp;
+                <span class="period">&period;</span>
+              </div>
+              <div class="phone">
+                &nbsp;<span class="post">k|wfgfWofks M</span> 9824930501
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/pages/bankLetter.js"></script>
+  </body>
+</html>

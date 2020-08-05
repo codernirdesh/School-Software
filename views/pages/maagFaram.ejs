@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>माग फारम - <%= schoolName %></title>
+    <%- include('../parts/favicon.ejs') %>
+    <link rel="stylesheet" href="/css/pages/maagFaram.css" />
+    <link rel="stylesheet" href="/date-picker/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- <div id="overlay" class="overlay">
+        <h1 class="title">Are you sure?</h1>
+        <div class="buttons">
+          <button class="yes" id="yes" type="submit">Yes</button>
+          <button class="no" id="no" type="button">No</button>
+        </div>
+      </div> -->
+      <div id="front-view" class="front-view">
+        <div class="header">
+          <h1 class="title" id="header">श्री अमर माध्यमिक बिद्यालय</h1>
+        </div>
+        <form class="form" method="POST" action="/page/Maag-Faaram">
+          <div>
+            <!-- शिक्षक को नाम	 -->
+            <label for="name">शिक्षकको नाम</label>
+            <input
+              required
+              type="text"
+              placeholder="lzIfs ljj/0f"
+              autocomplete="off"
+              name="name"
+              id="name"
+            />
+          </div>
+          <div>
+            <!-- योग्यता -->
+            <label for="yogyata">योग्यता</label>
+            <input
+              required
+              type="text"
+              placeholder="of]Uotf"
+              title="शिक्षकले हाँसिल गरेको योग्यता यहाँ उल्लेख गर्नुहोस् ( प्रीति फन्टमा )"
+              autocomplete="off"
+              name="yogyata"
+              id="yogyata"
+            />
+          </div>
+          <div>
+            <!-- तालिम -->
+            <label for="training">तालिम</label>
+            <select
+              name="training"
+              id="training"
+              title="तालिम लिए नलिएको जानकारी यहाँ छान्नुहोस्"
+            >
+              <option value="yes">k|fKt</option>
+              <option value="no">5}g</option>
+            </select>
+            <!-- <input required
+              type="text"
+              placeholder="lzIfs ljj/0f"
+              autocomplete="off"
+              name="training"
+              id="training"
+            /> -->
+          </div>
+          <div>
+            <!-- नियुक्ति मिति	 -->
+            <label for="appointedDate">नियुक्ति मिति ( ई.सं. )</label>
+            <input
+              required
+              type="text"
+              placeholder="साल/ महिना/ गते"
+              title="शिक्षकको नियुक्ति मिति छान्नुहोस्"
+              name="appointedDate"
+              id="appointedDate"
+              class="date-picker"
+            />
+          </div>
+          <div>
+            <!-- बढुवा मिति -->
+            <label for="badhuwaMiti">बढुवा मिति ( ई.सं. )</label>
+            <input
+              required
+              type="text"
+              title="शिक्षकको बढुवा भएको मिति छान्नुहोस् । बढुवा नभएको खण्डमा '२०२०/१/१' छान्नुहोस्"
+              placeholder="साल/ महिना/ गते"
+              name="badhuwaMiti"
+              id="badhuwaMiti"
+              class="date-picker"
+            />
+            <!-- <input required
+              type="date"
+              placeholder="08/25/2019"
+              autocomplete="off"
+              name="badhuwaMiti"
+              id="badhuwaMiti"
+            /> -->
+          </div>
+          <div>
+            <!-- पद -->
+            <label for="position">पद</label>
+            <select name="position" id="position" title="पद छान्नुहोस्">
+              <option value="principal">k|=c=</option>
+              <option value="teacher">lzIfs</option>
+              <option value="privateteacher">sd{rf/L lzIfs</option>
+              <option value="Accountant">n]vfkfn</option>
+              <option value="helper">sfof{no ;xof]uL</option>
+            </select>
+            <!-- <input required
+              type="text"
+              placeholder="lzIfs ljj/0f"
+              autocomplete="off"
+              name="post"
+              id="post"
+            /> -->
+          </div>
+          <div>
+            <!-- अस्था/स्था	 -->
+            <label for="type">अस्थायी/स्थायी</label>
+            <select name="type" id="type" 
+            title="अस्थायी/स्थायी/राहत/आन्तरिक निजि स्रोत छान्नुहोस्">
+              <option value="permanent">:yfoL</option>
+              <option value="temporary">c:yfoL</option>
+              <option value="rahat">/fxt</option>
+              <option value="privateSource">lghL >f]t</option>
+            </select>
+          </div>
+          <div>
+            <!-- श्रेणी -->
+            <label for="level">श्रेणी</label>
+            <select name="level" id="level">
+              <option value="1st">k|yd</option>
+              <option value="2nd">låtLo</option>
+              <option value="3rd">t[tLo</option>
+            </select>
+          </div>
+          <div>
+            <!-- तलब -->
+            <label for="salary">तलब</label>
+            <input
+              required
+              type="number"
+              placeholder="tna"
+              autocomplete="off"
+              name="salary"
+              id="salary"
+            />
+          </div>
+          <div>
+            <!-- स्केल -->
+            <label for="rate">स्केल</label>
+            <input
+              required
+              type="number"
+              placeholder="tna :s]n"
+              autocomplete="off"
+              name="rate"
+              id="rate"
+            />
+          </div>
+          <div>
+            <!-- सा. -->
+            <label for="rateNumber">सा.</label>
+            <input
+              required
+              type="number"
+              placeholder=";f="
+              autocomplete="off"
+              name="rateNumber"
+              id="rateNumber"
+            />
+          </div>
+          <div>
+            <!-- ग्रेड  -->
+            <label for="grade">ग्रेड</label>
+            <input
+              required
+              type="number"
+              placeholder="o|]8"
+              autocomplete="off"
+              name="grade"
+              id="grade"
+            />
+          </div>
+          <div>
+            <!-- क.सं कोष -->
+            <label for="kaSamKosh">कर्मचारी संचय कोष</label>
+            <input
+              required
+              type="number"
+              placeholder="sd{rf/L ;~ro sf]if"
+              autocomplete="off"
+              name="kaSamKosh"
+              id="kaSamKosh"
+            />
+          </div>
+          <div>
+            <!-- विमा -->
+            <label for="insurance">विमा</label>
+            <input
+              required
+              type="number"
+              placeholder="ladf /sd"
+              autocomplete="off"
+              name="insurance"
+              id="insurance"
+            />
+          </div>
+          <div>
+            <!-- प्र.अ. भत्ता -->
+            <label for="principalallowence">प्र.अ. भत्ता</label>
+            <input
+              required
+              type="number"
+              placeholder="k|=c= eQf"
+              autocomplete="off"
+              name="principalallowence"
+              id="principalallowence"
+            />
+          </div>
+          <div>
+            <!-- अन्य भत्ता -->
+            <label for="otherAllowence">अन्य भत्ता</label>
+            <input
+              required
+              type="number"
+              placeholder="cGo eQf"
+              autocomplete="off"
+              name="otherAllowence"
+              id="otherAllowence"
+            />
+          </div>
+          <div>
+            <!-- चाडवाड खर्च	 -->
+            <label for="festivalBonus">चाडवाड खर्च</label>
+            <input
+              required
+              type="number"
+              placeholder="rf8kj{ vr{"
+              autocomplete="off"
+              name="festivalBonus"
+              id="festivalBonus"
+            />
+          </div>
+          <div>
+            <!-- पोशाक -->
+            <label for="dressBonus">पोशाक खर्च</label>
+            <input
+              required
+              type="number"
+              placeholder="kf]zfs vr{"
+              autocomplete="off"
+              name="dressBonus"
+              id="dressBonus"
+            />
+          </div>
+          <div>
+            <!-- कैफियत -->
+            <label for="remarks">कैफियत</label>
+            <input
+              required
+              type="text"
+              placeholder="s}lkmot"
+              autocomplete="off"
+              name="remarks"
+              title="Yaha Varnuhos"
+              id="remarks"
+            />
+          </div>
+          <div>
+            <!-- Submit Button -->
+            <button id="submit" type="submit">शिक्षक थप्नुहोस्</button>
+          </div>
+        </form>
+        <div class="notice">'*' चिन्ह भएका खाली ठाउँ अनिवार्य रहेका छन्।</div>
+      </div>
+    </div>
+    <!-- this should go after your </body> -->
+    <script src="/date-picker/jquery.js"></script>
+    <script type="text/javascript" src="/date-picker/2.js"></script>
+    <script src="/js/pages/maagFaram.js"></script>
+    <script>
+      $(".date-picker").nepaliDatePicker({
+        dateFormat: "%y/%m/%d",
+        // dateFormat: "%D, %M %d, %y",
+        closeOnDateSelect: true,
+      });
+
+      $("#clear-bth").on("click", function (event) {
+        $(".bod-picker").val("");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=teko:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=poppins:wght@800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "preeti";
+  src: url(/fonts/PREETI.TTF);
+}
+
+@font-face {
+  font-family: "arap 11";
+  src: url("/fonts/ARAP 11 Regular.ttf");
+}
+
+@font-face {
+  font-family: "himchuli";
+  src: url("/fonts/Himchuli Bold.ttf");
+}
+
+@font-face {
+  font-family: "kantipur";
+  src: url("/fonts/Kantipur Reg.ttf");
+}
+
+@font-face {
+  font-family: "fontasy himali";
+  src: url("/fonts/Fontasy Himali Regular.ttf");
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #c1cde6;
+  position: relative;
+}
+
+button {
+  background-color: #46a034;
+  color: white;
+  padding: 10px 35px 10px 45px;
+  border-radius: 3px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.25);
+  font-family: "arap 11", sans-serif;
+  font-size: 22px;
+  -webkit-transition: -webkit-box-shadow ease-in-out 300ms;
+  transition: -webkit-box-shadow ease-in-out 300ms;
+  transition: box-shadow ease-in-out 300ms;
+  transition: box-shadow ease-in-out 300ms, -webkit-box-shadow ease-in-out 300ms;
+  position: relative;
+  cursor: url("/images/print-icon.png"), pointer;
+}
+
+button:hover {
+  -webkit-box-shadow: 0px 6px 10px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 6px 10px -1px rgba(0, 0, 0, 0.25);
+}
+
+button img {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.hide {
+  display: none;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.app .front-view {
+  font-family: "preeti", sans-serif;
+  border-radius: 5px;
+  padding: 10px 24px 5px 24px;
+  height: 1122.24px;
+  width: 793.92px;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0px 6px 15px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 6px 15px -1px rgba(0, 0, 0, 0.25);
+  -webkit-transition: -webkit-box-shadow ease-in-out 300ms;
+  transition: -webkit-box-shadow ease-in-out 300ms;
+  transition: box-shadow ease-in-out 300ms;
+  transition: box-shadow ease-in-out 300ms, -webkit-box-shadow ease-in-out 300ms;
+  position: relative;
+}
+
+.app .front-view:hover {
+  -webkit-box-shadow: 6px 0px 20px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 6px 0px 20px -1px rgba(0, 0, 0, 0.25);
+}
+
+.app .front-view .header {
+  width: 100%;
+  text-align: center;
+}
+
+.app .front-view .header .name {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.app .front-view .header .address {
+  font-size: 22px;
+}
+
+.app .front-view .header .title {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.app .front-view .header .title span.year {
+  font-family: "fontasy himali", sans-serif;
+  font-size: 18px;
+}
+
+.app .front-view table.poshakTable {
+  width: 100%;
+  table-layout: initial;
+  border-style: dashed;
+  border-collapse: collapse;
+  margin-top: 8px;
+  border: 1px dashed black;
+}
+
+.app .front-view table.poshakTable .head td {
+  font-weight: bold;
+  font-family: "FONTASY_HIMALI_TT", sans-serif;
+  font-size: 15px;
+  border-left: 1px dashed black;
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.app .front-view table.poshakTable .body td {
+  border-left: 1px dashed black;
+  border-top: 1px dashed black;
+  font-size: 22px;
+  font-family: "preeti", sans-serif;
+  text-align: left;
+  padding: 1.5px;
+  padding-left: 3px;
+}
+
+.app .front-view table.poshakTable .body td:nth-child(1) {
+  text-align: right;
+  font-family: "fontasy himali", sans-serif;
+  font-size: 14px;
+}
+
+.app .front-view table.poshakTable .body td:nth-child(2) {
+  text-align: center;
+}
+
+.app .front-view table.poshakTable .body td:nth-child(4) {
+  text-align: right;
+  font-family: "fontasy himali", sans-serif;
+  font-size: 14px;
+}
+
+.app .front-view .footer {
+  font-size: 20px;
+}
+
+.app .front-view .footer .inwords {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.app .front-view .footer .inwords span.value {
+  font-weight: normal;
+}
+
+.app .front-view .footer .sign {
+  margin-top: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+/*# sourceMappingURL=poshakBhatta.css.map */

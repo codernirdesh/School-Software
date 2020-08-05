@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=teko:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=poppins:wght@800&display=swap");
+@font-face {
+  font-family: "preeti";
+  src: url(/fonts/PREETI.TTF);
+}
+
+@font-face {
+  font-family: "arap 11";
+  src: url("/fonts/ARAP 11 Regular.ttf");
+}
+
+@font-face {
+  font-family: "himchuli";
+  src: url("/fonts/Himchuli Bold.ttf");
+}
+
+@font-face {
+  font-family: "kantipur";
+  src: url("/fonts/Kantipur Reg.ttf");
+}
+
+@font-face {
+  font-family: "fontasy himali";
+  src: url("/fonts/Fontasy Himali Regular.ttf");
+}
+
+* {
+  font-family: "teko", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.app {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  background-color: #eaf0f1;
+}
+
+.app .front-view {
+  border-radius: 10px;
+  padding: 50px 35px;
+  background-color: #fac42f;
+  -webkit-box-shadow: 0 0 15px #72727271;
+          box-shadow: 0 0 15px #72727271;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.app .front-view:hover {
+  -webkit-box-shadow: 0 0 20px #727272a4;
+          box-shadow: 0 0 20px #727272a4;
+}
+
+.app .front-view .school-details .school-name {
+  font-family: "teko", sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+  text-align: center;
+}
+
+.app .front-view .school-details .school-address {
+  font-size: 25px;
+  text-align: center;
+}
+
+.app .front-view .school-details .school-estd {
+  padding-top: 5px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.app .front-view .app-title {
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-family: "mukta", sans-serif;
+  font-weight: 800;
+}
+
+.app .front-view .buttons-block {
+  padding: 10px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.app .front-view .buttons-block button.main-buttons {
+  -webkit-box-shadow: 0 0 5px #72727271;
+          box-shadow: 0 0 5px #72727271;
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  -webkit-transition: all ease-in 300ms;
+  transition: all ease-in 300ms;
+}
+
+.app .front-view .buttons-block button.main-buttons:hover {
+  background-color: #0cc744;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-shadow: -5px 0 10px #474747c5;
+          box-shadow: -5px 0 10px #474747c5;
+}
+
+.app .front-view form select {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.app .front-view form select option {
+  padding: 100px;
+}
+/*# sourceMappingURL=style.css.map */

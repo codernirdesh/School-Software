@@ -1,0 +1,31 @@
+GET http://localhost:3000/
+
+###
+GET http://localhost:3000/get
+###
+GET http://localhost:3000/show
+###
+POST http://localhost:3000/page/Maag-Faaram
+Content-Type: "application/json"
+
+{
+"name": "bjbjb",
+"yogyata": "jbjbj",
+"training": "yes",
+"appointedDate": "२०७७/४/६",
+"badhuwaMiti": "२०७७/४/२१",
+"position": "helper",
+"type": "temporary",
+"level": "3rd",
+"salary": "555",
+"rate": "5555",
+"rateNumber": "55555555",
+"grade": "5555555",
+"kaSamKosh": "55555555",
+"insurance": "55555555",
+"principalallowence": "5555555",
+"otherAllowence": "555555",
+"festivalBonus": "5555555",
+"dressBonus": "5555555",
+"remarks": "5555555"
+}

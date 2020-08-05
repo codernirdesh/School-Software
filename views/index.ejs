@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>शिक्षक तथा कर्मचारी माग फारम</title>
+    <%- include('./parts/favicon.ejs') %>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="front-view">
+        <div class="school-details">
+          <div class="school-name">श्री अमर माध्यमिक बिद्यालय</div>
+          <div class="school-address">गौरादह-०९( बैगुन्धुरा ), झापा</div>
+          <div class="school-estd">स्था : वि.सं. २०२४</div>
+        </div>
+        <div class="app-title">शिक्षक तथा कर्मचारी माग फारम</div>
+        <div class="level">
+          तह :
+          <form>
+            <select name="level" id="level-dropdown">
+              <option value="तह छान्नुहोस्">Select Month</option>
+            </select>
+          </form>
+        </div>
+        <div class="buttons-block">
+          <button id="button1" class="main-buttons">माग फारम</button>
+          <button id="button2" class="main-buttons">भर्पाई</button>
+          <button id="button3" class="main-buttons">सञ्चयकोष</button>
+          <button id="button4" class="main-buttons">पोशाक भत्ता</button>
+          <button id="button5" class="main-buttons">विमा</button>
+          <button id="button6" class="main-buttons">सा.सु. कर</button>
+          <button id="button7" class="main-buttons">आयकर</button>
+          <button id="button8" class="main-buttons">बैंक लेटर</button>
+          <button id="button9" class="main-buttons">बचत ब्रिद्धिकोष</button>
+        </div>
+        <div class="section-title">विवरण</div>
+        <form>
+          <select name="month" id="month-dropdown">
+            <option value="Select Month">Select Month</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

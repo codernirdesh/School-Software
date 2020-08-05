@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>माग फारम - <%= schoolName %></title>
+    <%- include('../parts/favicon.ejs') %>
+    <link rel="stylesheet" href="/css/pages/poshakBhatta.css" />
+    <script src="/js/num-to-word-nepali.js"></script>
+    <!-- <script src="/js/abc.js"></script> -->
+  </head>
+  <body>
+    <button class="button" id="button" onclick="printPage('app')">
+      <img src="/images/print-icon.png" alt="printIcon" /> kf]zfs eQf ekf{O
+      lk|G^ ug'{xf];\
+    </button>
+    <div class="app">
+      <div class="front-view">
+        <div class="header">
+          <div class="name">>L cd/ dfWolds ljBfno</div>
+          <div class="address">uf}/fbx (), a}u'Gw'/f, emfkf</div>
+          <div class="title">
+            kf]zfs eQf ekf{O <span class="year">2077</span>
+          </div>
+        </div>
+        <table class="poshakTable" border="1">
+          <tr class="head">
+            <% var total=0; %> 
+            <td>qm=;+=</td>
+            <td>tx</td>
+            <td>lzIfssf] gfdy/</td>
+            <td>kf]zfs eQf</td>
+            <td>x:tfIf/</td>
+            <td>s}=</td>
+          </tr>
+          <% let counter=1; teachersList.forEach(data => { %>
+          <tr class="body">
+          <td><%=counter%></td>
+            <td>lzIfs</td>
+            <td><%= data.name %></td>
+            <td>T.<%= data.dressBonus %></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <% counter++; total+=data.dressBonus;}) %>
+        </table>
+        <div class="footer">
+          <div class="inwords">
+            hDdf M <span class="value"></span>
+          </div>
+          <div class="sign">
+            <div class="prepare">
+              ––––––––––––––––<br />tof/ ug]{<br />v]d k|;fb sf]O{/fnf
+            </div>
+            <div class="headmaster">
+              ––––––––––––––––<br />k|wfgfWofks<br />uf]kfn k|;fb kf]v/]n
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/pages/poshakBhatta.js"></script>
+  </body>
+</html>
