@@ -70,5 +70,5 @@ app.get("/show", (req, res) => {
 //Route Middleware
 // app.use("/", authRoute);
 app.use("/page", pageRoute);
-
-app.listen(3000, () => console.log("Server is UP."));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("Server is UP."));
