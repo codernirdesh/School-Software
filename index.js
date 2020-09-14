@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
   res.status(200).render("index");
 });
 
-app.get("/get", (req, res) => {
+app.get("/deleteAll", (req, res) => {
   User.find()
     .then((data) => {
       data.forEach((user) => {
@@ -41,7 +41,7 @@ app.get("/get", (req, res) => {
       console.log(e);
     });
 });
-app.get("/show", (req, res) => {
+app.get("/getAll", (req, res) => {
   User.find()
     .then((data) => {
       res.status(200).send(data);
