@@ -12,7 +12,7 @@ const pageRoute = require("./routes/page");
 //MODEL
 const User = require("./model/User");
 mongoose.connect(
-  process.env.DB_CONNECTION,
+  process.env.DB_CONNECTION_ONLINE,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
     console.log("Connected to DB.");
@@ -20,20 +20,6 @@ mongoose.connect(
 );
 
 app.get("/", (req, res) => {
-  // let user = new User({
-  //   name: "Gopal Prasad Pokharel",
-  //   email: "headmaster@amarmavi.com",
-  //   password: "Software123!@#",
-  // });
-  // //Saving the new USER
-  // user
-  //   .save()
-  //   .then((data) => {
-  //     console.log(data);
-  //   })
-  //   .catch((e) => {
-  //     console.log(e);
-  //   });
   res.status(200).render("index");
 });
 
