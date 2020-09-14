@@ -28,10 +28,10 @@ app.get("/deleteAll", (req, res) => {
     .then((data) => {
       data.forEach((user) => {
         User.findByIdAndDelete(`${user._id}`)
-          .then((message) => {
+          .then(() => {
             console.log(`User " ${user.name} " deleted successfully`);
           })
-          .catch((e) => {
+          .catch(() => {
             console.log(`Unable to delete user :" ${user.name} "`);
           });
       });
