@@ -1,10 +1,10 @@
 # Amar Software (INTERNAL)
 
 ## Start
-1. To start the project, run the following commands
-```JavaScript
-npm start
-```
+1. To start the project,
+   - Rename `.example.env` file with `.env`
+   - Run `npm start` in the terminal
+
 *Make sure you are connected to the internet, Because it uses mongoDB Cloud Database.* Feel **free to contribute** to this project.
   - [ ] माग फारम
   - [x] [भर्पाई](#varpai-table)
