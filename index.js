@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const { render } = require("ejs");
+const {
+  render
+} = require("ejs");
 require("dotenv/config");
 const app = express();
 app.set("view engine", "ejs");
@@ -12,16 +14,16 @@ const pageRoute = require("./routes/page");
 //MODEL
 const User = require("./model/User");
 mongoose.connect(
-  process.env.DB_CONNECTION_ONLINE,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+  process.env.DB_CONNECTION_ONLINE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  },
   () => {
     console.log("Connected to DB.");
   }
 );
 
-app.get("/", (req, res) => {
-  res.status(200).render("index");
-});
+app.get("/", (req, res) => res.status(200).render("index"));
 
 app.get("/deleteAll", (req, res) => {
   User.find()
