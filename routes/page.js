@@ -10,7 +10,9 @@ DUMMy DATA
 const teachersData = require("../data/bank");
 const varpaiData = require("../data/varpai");
 // create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+var urlencodedParser = bodyParser.urlencoded({
+  extended: false,
+});
 
 router.get("/", (req, res) => {
   res.json({
@@ -31,7 +33,9 @@ router.get("/", (req, res) => {
 const schoolName = "अमर मा. वि. बैगुन्धुरा";
 //माग फारमको बाटो ( रुट )
 router.get("/Maag-Faaram", (req, res) => {
-  res.status(200).render("./pages/maagFaram", { schoolName });
+  res.status(200).render("./pages/maagFaram", {
+    schoolName,
+  });
 });
 
 router.post("/Maag-Faaram", urlencodedParser, async (req, res) => {
@@ -74,10 +78,13 @@ router.post("/Maag-Faaram", urlencodedParser, async (req, res) => {
 //
 
 //भर्पाई जाने बाटो ( रुट )
-router.get("/varpai", async(req, res) => {
-  let fetchedData = await User.find()
+router.get("/varpai", async (req, res) => {
+  await User.find()
     .then((teachersList) => {
-      res.status(200).render("./pages/varpai", { schoolName, teachersList });
+      res.status(200).render("./pages/varpai", {
+        schoolName,
+        teachersList,
+      });
       // res.send(teachersList);
     })
     .catch((e) => {
@@ -86,13 +93,18 @@ router.get("/varpai", async(req, res) => {
 });
 //सञ्चयकोष जाने बाटो ( रुट )
 router.get("/sanchayakosh", (req, res) => {
-  res.status(200).render("./pages/sanchayakosh", { schoolName });
+  res.status(200).render("./pages/sanchayakosh", {
+    schoolName,
+  });
 });
 //पोशाकभत्ता जाने बाटो ( रुट )
 router.get("/poshakBhatta", async (req, res) => {
   let fetchedData = await User.find()
     .then((teachersList) => {
-      res.status(200).render("./pages/poshakBhatta", { schoolName, teachersList });
+      res.status(200).render("./pages/poshakBhatta", {
+        schoolName,
+        teachersList,
+      });
       // res.send(teachersList);
     })
     .catch((e) => {
@@ -101,24 +113,64 @@ router.get("/poshakBhatta", async (req, res) => {
 });
 //विमा जाने बाटो ( रुट )
 router.get("/bima", (req, res) => {
-  res.status(200).render("./pages/bima", { schoolName });
+  res.status(200).render("./pages/bima", {
+    schoolName,
+  });
 });
 //सा.सु. कर जाने बाटो ( रुट )
 router.get("/saSuKar", (req, res) => {
-  res.status(200).render("./pages/saSuKar", { schoolName });
+  res.status(200).render("./pages/saSuKar", {
+    schoolName,
+  });
 });
 //आयकर जाने बाटो ( रुट )
 router.get("/aayakar", (req, res) => {
-  res.status(200).render("./pages/aayakar", { schoolName });
+  res.status(200).render("./pages/aayakar", {
+    schoolName,
+  });
 });
 //बैंक लेटर जाने बाटो ( रुट )
 router.get("/bankLetter", (req, res) => {
-  res.status(200).render("./pages/bankLetter", { schoolName, teachersData });
+  res.status(200).render("./pages/bankLetter", {
+    schoolName,
+    teachersData,
+  });
 });
 
 //बचत बृद्धिकोष जाने बाटो ( रुट )
 router.get("/bachatBriddhiKosh", (req, res) => {
-  res.status(200).render("./pages/bachatBriddhiKosh", { schoolName });
+  res.status(200).render("./pages/bachatBriddhiKosh", {
+    schoolName,
+  });
+});
+// MYSQL
+router.get("/db", (req, res) => {
+  console.log("abcd");
+  var mysql = require('mysql');
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'test',
+  });
+  let sql = "SELECT * FROM `staffs` ORDER BY `id` ASC";
+  connection.query(sql, async (err, result) => {
+    console.log(result);
+    if (err) {
+      throw err;
+    }
+    if (result != null) {
+      res.send("Success");
+    } else {
+      res.send("There is no result");
+    }
+  });
+  var insertSQL = "INSERT INTO `staffs` (`id`, `name`, `phone`, `isPrivate`) VALUES (NULL, 'Gopal Prasad', '98249821', '1')";
+  connection.query(insertSQL, () => {
+    console.log(`inserted`)
+  });
+  connection.end();
+
 });
 
 module.exports = router;
