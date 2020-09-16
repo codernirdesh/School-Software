@@ -1,12 +1,16 @@
 {
-  "name": "amarsoftware",
+  "name": "schoolsoftware",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index"
   },
-  "keywords": [],
+  "keywords": [
+    "Account Management System",
+    "School management System",
+    "Node JS school Project"
+  ],
   "author": "Nirdesh Pokharel",
   "license": "ISC",
   "dependencies": {
