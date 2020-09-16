@@ -28,4 +28,4 @@ npm start
  ## Bank Letter
  ![Bank Letter](./screenshots/6.png)
 
- *Feel Free to contribute 😁 *
+ *Feel Free to contribute* 😁
