@@ -3,6 +3,7 @@
 ## Start
 1. To start the project,
    - Rename `.example.env` file with `.env`
+   - Run `npm install` in the terminal
    - Run `npm start` in the terminal
 
 *Make sure you are connected to the internet, Because it uses mongoDB Cloud Database.* Feel **free to contribute** to this project.
