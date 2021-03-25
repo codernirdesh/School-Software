@@ -13,7 +13,7 @@ const pageRoute = require("./routes/page");
 
 //MODEL
 const User = require("./model/User");
-mongoose.connect(
+mongoose.createConnection(
   process.env.DB_CONNECTION_ONLINE, {
     useNewUrlParser: true,
     useUnifiedTopology: true
