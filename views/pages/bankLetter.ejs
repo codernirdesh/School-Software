@@ -67,16 +67,16 @@
                   <td class="tableHead">vftf g+=</td>
                   <td class="tableHead">s}lkmot</td>
                 </thead>
-                <% teachersData.forEach(teacher => { %>
+                <% let counter=1; teachersData.forEach(teacher => {%>
                 <tr>
-                  <td class="teachersData"><%=teacher.id%></td>
+                  <td class="teachersData"><%=counter%></td>
                   <td class="teachersData"><%=teacher.name%></td>
                   <td class="teachersData"><%=teacher.post%></td>
                   <td class="teachersData"><%=teacher.receivingMoney%></td>
                   <td class="teachersData"><%=teacher.accountNumber%></td>
                   <td class="teachersData"><%=teacher.remarks%></td>
                 </tr>
-                <% }) %>
+                <%counter=counter+1}) %>
               </table>
               <div class="wrapper">
                 <div class="sign-by">uf]kfn k|;fb kf]v/]n<br />k|wfgfWofks</div>

@@ -59,4 +59,4 @@ app.get("/getAll", (req, res) => {
 // app.use("/", authRoute);
 app.use("/page", pageRoute);
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log("Server is UP."));
+app.listen(PORT, () => console.log(`Server is UP.\nVisit : http://localhost:${PORT}`));

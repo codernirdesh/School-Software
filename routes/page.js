@@ -7,7 +7,7 @@ const convertToPreeti = require("../public/js/preeti");
 /*
 DUMMy DATA
 */
-const teachersData = require("../data/bank");
+//const teachersData = require("../data/bank");
 const varpaiData = require("../data/varpai");
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({
@@ -130,11 +130,22 @@ router.get("/aayakar", (req, res) => {
   });
 });
 //बैंक लेटर जाने बाटो ( रुट )
-router.get("/bankLetter", (req, res) => {
-  res.status(200).render("./pages/bankLetter", {
-    schoolName,
-    teachersData,
-  });
+router.get("/bankLetter", async(req, res) => {
+  await User.find()
+    .then((teachersData) => {
+      let count = 1;
+      res.status(200).render("./pages/bankLetter", {
+        schoolName,
+        teachersData,
+      });
+    })
+    .catch((e) => {
+      console.error(e);
+    });
+  // res.status(200).render("./pages/bankLetter", {
+  //   schoolName,
+  //   teachersData,
+  // });
 });
 
 //बचत बृद्धिकोष जाने बाटो ( रुट )
